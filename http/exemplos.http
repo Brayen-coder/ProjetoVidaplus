@@ -1,0 +1,40 @@
+
+### Criar paciente
+POST http://localhost:8080/api/pacientes
+Content-Type: application/json
+
+{
+  "nome": "Ana Souza",
+  "cpf": "111.222.333-44",
+  "dataNasc": "1990-05-01",
+  "peso": 65.5,
+  "altura": 1.68,
+  "dadosClinicos": "Sem alergias conhecidas"
+}
+
+### Criar médico
+POST http://localhost:8080/api/medicos
+Content-Type: application/json
+
+{ "nome": "Dr. Bruno", "crm": "CRM123", "especialidade": "Clínico Geral" }
+
+### Criar clínica
+POST http://localhost:8080/api/clinicas
+Content-Type: application/json
+
+{ "nome": "VidaPlus Unidade Centro", "cnpj": "12.345.678/0001-90", "endereco": "Rua A, 123" }
+
+### Agendar consulta
+POST http://localhost:8080/api/consultas/agendar
+Content-Type: application/json
+
+{
+  "pacienteId": 1,
+  "medicoId": 1,
+  "clinicaId": 1,
+  "dataHora": "2025-09-01T10:00:00",
+  "observacoes": "Primeira consulta"
+}
+
+### Listar resumo de consultas
+GET http://localhost:8080/api/consultas/resumo

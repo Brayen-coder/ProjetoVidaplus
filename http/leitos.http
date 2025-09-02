@@ -1,0 +1,12 @@
+
+### Definir total de leitos
+PUT http://localhost:8080/api/clinicas/1/leitos/total/100
+
+### Ocupar 3 leitos
+PUT http://localhost:8080/api/clinicas/1/leitos/ocupar/3
+
+### Liberar 2 leitos
+PUT http://localhost:8080/api/clinicas/1/leitos/liberar/2
+
+### Ver status
+GET http://localhost:8080/api/clinicas/1/leitos/status
